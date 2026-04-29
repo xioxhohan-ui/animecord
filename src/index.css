@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+@config "../tailwind.config.js";
+
+@layer base {
+  :root {
+    --background: 222 47% 6%;
+    --foreground: 210 40% 96%;
+    --card: 222 47% 8%;
+    --card-foreground: 210 40% 96%;
+    --popover: 222 47% 8%;
+    --popover-foreground: 210 40% 96%;
+    --primary: 263 80% 60%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 222 30% 12%;
+    --secondary-foreground: 210 40% 96%;
+    --muted: 222 30% 14%;
+    --muted-foreground: 215 20% 55%;
+    --accent: 222 30% 16%;
+    --accent-foreground: 210 40% 96%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 222 30% 14%;
+    --input: 222 30% 14%;
+    --ring: 263 80% 60%;
+    --radius: 0.75rem;
+    --success: 142 71% 45%;
+  }
+}
+
+@layer base {
+  * { border-color: hsl(var(--border)); box-sizing: border-box; }
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+    overflow-x: hidden;
+    height: 100%;
+    /* GPU compositing hint for low-end devices */
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeSpeed;
+  }
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-feature-settings: "rlig" 1, "calt" 1;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    height: 100%;
+    /* Smooth scrolling off for perf */
+    scroll-behavior: auto;
+  }
+  #root {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  /* Reduce motion for low-end devices */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+/* ── Scrollbar ────────────────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: hsl(var(--muted)); border-radius: 99px; }
+::-webkit-scrollbar-thumb:hover { background: hsl(var(--muted-foreground)); }
+
+/* ── Glass panel — ultra-light blur for performance ───────────────────────── */
+.glass-panel {
+  background: rgba(10, 12, 22, 0.85);
+  /* reduced blur to 4px for ultra-smooth scrolling on low-end */
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel-light {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* ── Gradient text ───────────────────────────────────────────────────── */
+.gradient-text {
+  background: linear-gradient(135deg, hsl(var(--primary)) 0%, #60a5fa 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Ambient background — static, no animation ───────────────────────── */
+.ambient-bg::before {
+  content: '';
+  position: fixed;
+  top: -20%;
+  left: -10%;
+  width: 50%;
+  height: 50%;
+  background: radial-gradient(ellipse, hsla(263,80%,60%,0.08) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+.ambient-bg::after {
+  content: '';
+  position: fixed;
+  bottom: -20%;
+  right: -10%;
+  width: 45%;
+  height: 45%;
+  background: radial-gradient(ellipse, rgba(59,130,246,0.07) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ── Button glow — only on hover, no animation ───────────────────────── */
+.btn-glow:hover {
+  box-shadow: 0 0 16px hsla(263,80%,60%,0.35);
+}
+
+/* ── Status dots ─────────────────────────────────────────────────────── */
+.status-online  { background: #22c55e; }
+.status-idle    { background: #f59e0b; }
+.status-dnd     { background: #ef4444; }
+.status-offline { background: #6b7280; }
+
+/* ── Message animation — fast, CSS only ──────────────────────────────── */
+@keyframes msgIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.msg-in { animation: msgIn 0.15s ease-out forwards; }
+
+/* ── Server icons ────────────────────────────────────────────────────── */
+.server-active {
+  border-radius: 16px;
+  background: hsl(var(--primary));
+}
+.server-inactive {
+  border-radius: 24px;
+  transition: border-radius 0.15s ease;
+}
+.server-inactive:hover {
+  border-radius: 16px;
+}
+
+/* ── Typing bounce (CSS-only, no framer-motion) ──────────────────────── */
+@keyframes typingBounce {
+  0%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-4px); }
+}
+.typing-dot {
+  width: 5px; height: 5px;
+  border-radius: 50%;
+  background: currentColor;
+  animation: typingBounce 1s infinite;
+}
+.typing-dot:nth-child(2) { animation-delay: 0.15s; }
+.typing-dot:nth-child(3) { animation-delay: 0.3s; }
+
+/* ── Image performance ───────────────────────────────────────────────── */
+img {
+  image-rendering: auto;
+  /* Enable hardware decode for images */
+  content-visibility: auto;
+}
+
+/* ── Will-change only where needed ───────────────────────────────────── */
+.sidebar-panel { will-change: transform; }

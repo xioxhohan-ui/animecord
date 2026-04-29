@@ -1,0 +1,191 @@
+[
+  {
+    "id": "mojhqc2ykgp5u",
+    "dmKey": "mojhasm00a368::mojhoqlhp0lbo",
+    "senderId": "mojhoqlhp0lbo",
+    "receiverId": "mojhasm00a368",
+    "senderName": "124",
+    "senderAvatar": "https://api.dicebear.com/7.x/notionists/svg?seed=123&backgroundColor=b6e3f4",
+    "content": "ji",
+    "timestamp": 1777433025706,
+    "read": true
+  },
+  {
+    "id": "mojhqkxf1ohih",
+    "dmKey": "mojhasm00a368::mojhoqlhp0lbo",
+    "senderId": "mojhasm00a368",
+    "receiverId": "mojhoqlhp0lbo",
+    "senderName": "CEO",
+    "senderAvatar": "https://api.dicebear.com/7.x/notionists/svg?seed=ceo&backgroundColor=b6e3f4",
+    "content": "ass",
+    "timestamp": 1777433037171,
+    "read": false
+  },
+  {
+    "id": "mojkgbs1onwqo",
+    "dmKey": "mojhasm00a368::mojj40725a4is",
+    "senderId": "mojj40725a4is",
+    "receiverId": "mojhasm00a368",
+    "senderName": "rio",
+    "senderAvatar": "https://api.dicebear.com/7.x/notionists/svg?seed=rio&backgroundColor=b6e3f4",
+    "content": "hi",
+    "timestamp": 1777437597601,
+    "read": true
+  },
+  {
+    "id": "mojkgsx5tt1rs",
+    "dmKey": "mojhasm00a368::mojj40725a4is",
+    "senderId": "mojhasm00a368",
+    "receiverId": "mojj40725a4is",
+    "senderName": "CEO",
+    "senderAvatar": "https://api.dicebear.com/7.x/notionists/svg?seed=ceo&backgroundColor=b6e3f4",
+    "content": "http://localhost:5173/invite/mojjp8ulbmed4",
+    "timestamp": 1777437619817,
+    "read": true
+  },
+  {
+    "id": "mojp60hjgmpmz",
+    "dmKey": "mojhasm00a368::mojj40725a4is",
+    "senderId": "mojj40725a4is",
+    "receiverId": "mojhasm00a368",
+    "senderName": "rio",
+    "senderAvatar": "https://api.dicebear.com/7.x/notionists/svg?seed=rio&backgroundColor=b6e3f4",
+    "content": "😭",
+    "timestamp": 1777445514487,
+    "read": true
+  },
+  {
+    "id": "mojqozaawsw5s",
+    "dmKey": "mojhasm00a368::mojj40725a4is",
+    "senderId": "mojhasm00a368",
+    "receiverId": "mojj40725a4is",
+    "senderName": "CEO",
+    "senderAvatar": "https://api.dicebear.com/7.x/notionists/svg?seed=ceo&backgroundColor=b6e3f4",
+    "content": "🎁 Gifted frame: Alhaitham",
+    "timestamp": 1777448079010,
+    "read": true,
+    "type": "frame_gift",
+    "frameGift": {
+      "frameId": "Alhaitham_1_",
+      "frameName": "Alhaitham",
+      "claimed": true
+    }
+  },
+  {
+    "id": "mojqsye67j828",
+    "dmKey": "mojhasm00a368::mojj40725a4is",
+    "senderId": "mojj40725a4is",
+    "receiverId": "mojhasm00a368",
+    "senderName": "rio",
+    "senderAvatar": "https://api.dicebear.com/7.x/notionists/svg?seed=rio&backgroundColor=b6e3f4",
+    "content": "i want that",
+    "timestamp": 1777448264478,
+    "read": true
+  },
+  {
+    "id": "mojqtfbjicao1",
+    "dmKey": "mojhasm00a368::mojj40725a4is",
+    "senderId": "mojhasm00a368",
+    "receiverId": "mojj40725a4is",
+    "senderName": "CEO",
+    "senderAvatar": "https://api.dicebear.com/7.x/notionists/svg?seed=ceo&backgroundColor=b6e3f4",
+    "content": "🎁 Gifted frame: Albedo",
+    "timestamp": 1777448286415,
+    "read": true,
+    "type": "frame_gift",
+    "frameGift": {
+      "frameId": "Albedo",
+      "frameName": "Albedo",
+      "claimed": true
+    }
+  },
+  {
+    "id": "mojt5eut14hck",
+    "dmKey": "mojhasm00a368::mojt3yjwph6q6",
+    "senderId": "mojhasm00a368",
+    "receiverId": "mojt3yjwph6q6",
+    "senderName": "CEO",
+    "senderAvatar": "https://api.dicebear.com/7.x/notionists/svg?seed=ceo&backgroundColor=b6e3f4",
+    "content": "hey",
+    "timestamp": 1777452204917,
+    "read": true
+  },
+  {
+    "id": "mojt5s4ep1pmq",
+    "dmKey": "mojhasm00a368::mojt3yjwph6q6",
+    "senderId": "mojt3yjwph6q6",
+    "receiverId": "mojhasm00a368",
+    "senderName": "w",
+    "senderAvatar": "https://api.dicebear.com/7.x/notionists/svg?seed=w&backgroundColor=b6e3f4",
+    "content": "h3",
+    "timestamp": 1777452222110,
+    "read": true
+  },
+  {
+    "id": "mojvrvd52i9p9",
+    "dmKey": "mojhasm00a368::mojvn4y82o39m",
+    "senderId": "mojvn4y82o39m",
+    "receiverId": "mojhasm00a368",
+    "senderName": "sadas",
+    "senderAvatar": "https://api.dicebear.com/7.x/notionists/svg?seed=ffas&backgroundColor=b6e3f4",
+    "content": "I want to buy the frame: \"Alhaitham\" (ID: Alhaitham) for 10 tk.",
+    "timestamp": 1777456611977,
+    "read": false
+  },
+  {
+    "id": "mojvsh55851p0",
+    "dmKey": "mojhasm00a368::mojvn4y82o39m",
+    "senderId": "mojhasm00a368",
+    "receiverId": "mojvn4y82o39m",
+    "senderName": "CEO",
+    "senderAvatar": "https://api.dicebear.com/7.x/notionists/svg?seed=ceo&backgroundColor=b6e3f4",
+    "content": "🎁 Gifted frame: Alhaitham",
+    "timestamp": 1777456640201,
+    "read": false,
+    "type": "frame_gift",
+    "frameGift": {
+      "frameId": "Alhaitham",
+      "frameName": "Alhaitham",
+      "claimed": true
+    }
+  },
+  {
+    "id": "mojvsieda2yg1",
+    "dmKey": "mojhasm00a368::mojvn4y82o39m",
+    "senderId": "mojhasm00a368",
+    "receiverId": "mojvn4y82o39m",
+    "senderName": "CEO",
+    "senderAvatar": "https://api.dicebear.com/7.x/notionists/svg?seed=ceo&backgroundColor=b6e3f4",
+    "content": "🎁 Gifted frame: Alhaitham",
+    "timestamp": 1777456641829,
+    "read": false,
+    "type": "frame_gift",
+    "frameGift": {
+      "frameId": "Alhaitham",
+      "frameName": "Alhaitham",
+      "claimed": true
+    }
+  },
+  {
+    "id": "mojwbbzjchs0f",
+    "dmKey": "mojhasm00a368::mojwaw1hzu2df",
+    "senderId": "mojwaw1hzu2df",
+    "receiverId": "mojhasm00a368",
+    "senderName": "t",
+    "senderAvatar": "https://api.dicebear.com/7.x/notionists/svg?seed=test&backgroundColor=b6e3f4",
+    "content": "I want to buy the frame: \"Albedo\" (ID: Albedo) for 10 tk.",
+    "timestamp": 1777457519983,
+    "read": false
+  },
+  {
+    "id": "mojwbe8353550",
+    "dmKey": "mojhasm00a368::mojwaw1hzu2df",
+    "senderId": "mojwaw1hzu2df",
+    "receiverId": "mojhasm00a368",
+    "senderName": "t",
+    "senderAvatar": "https://api.dicebear.com/7.x/notionists/svg?seed=test&backgroundColor=b6e3f4",
+    "content": "I want to buy the frame: \"Albedo\" (ID: Albedo) for 10 tk.",
+    "timestamp": 1777457522883,
+    "read": false
+  }
+]

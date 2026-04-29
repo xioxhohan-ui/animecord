@@ -1,0 +1,81 @@
+[
+  {
+    "id": "mojiudxguglid",
+    "channelId": "mojhd3vbdz1qh",
+    "senderId": "mojhasm00a368",
+    "senderName": "CEO",
+    "senderAvatar": "https://api.dicebear.com/7.x/notionists/svg?seed=ceo&backgroundColor=b6e3f4",
+    "content": "📢 Kmn achen apnara",
+    "file": null,
+    "reactions": {
+      "❤️": [],
+      "🎉": [
+        "mojhasm00a368"
+      ],
+      "🔥": [
+        "mojhasm00a368"
+      ],
+      "✅": [
+        "mojhasm00a368"
+      ]
+    },
+    "timestamp": 1777434894340,
+    "isAnnouncement": true
+  },
+  {
+    "id": "mojjh3mmrbb0k",
+    "channelId": "mojhd3vbla1qv",
+    "senderId": "mojhasm00a368",
+    "senderName": "CEO",
+    "senderAvatar": "https://api.dicebear.com/7.x/notionists/svg?seed=ceo&backgroundColor=b6e3f4",
+    "content": "Hello AnimeCord!",
+    "file": null,
+    "reactions": {},
+    "timestamp": 1777435954079
+  },
+  {
+    "id": "mojkftsj2spjj",
+    "channelId": "mojhd3vbla1qv",
+    "senderId": "mojj40725a4is",
+    "senderName": "rio",
+    "senderAvatar": "https://api.dicebear.com/7.x/notionists/svg?seed=rio&backgroundColor=b6e3f4",
+    "content": "dddd",
+    "file": null,
+    "reactions": {},
+    "timestamp": 1777437574291
+  },
+  {
+    "id": "mojm9dzkwfkch",
+    "channelId": "mojhd3vbla1qv",
+    "senderId": "mojj40725a4is",
+    "senderName": "rio",
+    "senderAvatar": "https://api.dicebear.com/7.x/notionists/svg?seed=rio&backgroundColor=b6e3f4",
+    "content": "qqqqqqq",
+    "file": null,
+    "reactions": {},
+    "timestamp": 1777440633104
+  },
+  {
+    "id": "mojpu28t07sea",
+    "channelId": "mojhd3vbla1qv",
+    "senderId": "mojhasm00a368",
+    "senderName": "CEO",
+    "senderAvatar": "https://api.dicebear.com/7.x/notionists/svg?seed=ceo&backgroundColor=b6e3f4",
+    "content": "hi",
+    "file": null,
+    "reactions": {},
+    "timestamp": 1777446636509
+  },
+  {
+    "id": "mojt4vuvrze80",
+    "channelId": "mojq0czou94s9",
+    "senderId": "mojhasm00a368",
+    "senderName": "CEO",
+    "senderAvatar": "https://api.dicebear.com/7.x/notionists/svg?seed=ceo&backgroundColor=b6e3f4",
+    "content": "📢 Hacker Apeaired",
+    "file": null,
+    "reactions": {},
+    "timestamp": 1777452180295,
+    "isAnnouncement": true
+  }
+]

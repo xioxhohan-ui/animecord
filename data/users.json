@@ -1,0 +1,199 @@
+[
+  {
+    "id": "mojhasm00a368",
+    "username": "ceo",
+    "password_hash": "$2b$10$rBolc9TNfDBQLwXXBlHT7OnrGBwyhZDr9OaqR/o6sVYAvnzufxgdu",
+    "role": "CEO",
+    "displayName": "CEO",
+    "avatar": "https://api.dicebear.com/7.x/notionists/svg?seed=ceo&backgroundColor=b6e3f4",
+    "banner": "https://i.pinimg.com/736x/87/7e/ed/877eed7ebc62d244a246332af8b3d627.jpg",
+    "bio": "Platform CEO — supreme authority.",
+    "status": "online",
+    "lastActive": 1777461165027,
+    "banned": false,
+    "gender": "Male",
+    "age": "25",
+    "activeFrame": "Arlecchino",
+    "ipInfo": {
+      "ip": "::1",
+      "device": "desktop",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"
+    }
+  },
+  {
+    "id": "mojhoqlhp0lbo",
+    "username": "123",
+    "password_hash": "$2b$10$MlnqauGFUcvQ0rkroQ8Y7uyfAj7VtQwQIn3MGNE9.kAJjx6BVKExC",
+    "role": "USER",
+    "displayName": "124",
+    "avatar": "https://api.dicebear.com/7.x/notionists/svg?seed=123&backgroundColor=b6e3f4",
+    "banner": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&auto=format&fit=crop",
+    "bio": "New to AnimeCord!",
+    "status": "dnd",
+    "lastActive": 1777435294386,
+    "banned": false
+  },
+  {
+    "id": "mojj40725a4is",
+    "username": "rio",
+    "password_hash": "$2b$10$Yvm8rLaT9yW/3xdKv6ibMOa8eOntazPRBxSO/ec3nGcp7pj0nscpa",
+    "role": "USER",
+    "displayName": "rio",
+    "avatar": "https://api.dicebear.com/7.x/notionists/svg?seed=rio&backgroundColor=b6e3f4",
+    "banner": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&auto=format&fit=crop",
+    "bio": "New to AnimeCord!",
+    "status": "online",
+    "lastActive": 1777451888028,
+    "banned": false,
+    "gender": "Male",
+    "age": "20",
+    "ownedFrames": [
+      "Alhaitham_1_",
+      "Albedo"
+    ],
+    "activeFrame": "Albedo"
+  },
+  {
+    "id": "mojt3yjwph6q6",
+    "username": "w",
+    "password_hash": "$2b$10$LR7HDYmmcPvxaOyzACBreuEWiCIkMaKsUMmeh0/18cc6DPjJgQ.w.",
+    "role": "USER",
+    "displayName": "w",
+    "avatar": "https://api.dicebear.com/7.x/notionists/svg?seed=w&backgroundColor=b6e3f4",
+    "banner": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&auto=format&fit=crop",
+    "bio": "New to AnimeCord!",
+    "status": "online",
+    "lastActive": 1777452409724,
+    "banned": true,
+    "ownedFrames": [],
+    "coins": 100,
+    "ipInfo": {
+      "ip": "::1",
+      "device": "desktop",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36 Edg/147.0.0.0"
+    }
+  },
+  {
+    "id": "mojta7lf4zd0u",
+    "username": "2",
+    "password_hash": "$2b$10$0.csFyrGGOCaVDnhSMkyzuiiPBX4lhL2AGtLW2cThYpS3CukM8ABW",
+    "role": "USER",
+    "displayName": "2",
+    "avatar": "https://api.dicebear.com/7.x/notionists/svg?seed=2&backgroundColor=b6e3f4",
+    "banner": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&auto=format&fit=crop",
+    "bio": "New to AnimeCord!",
+    "status": "online",
+    "lastActive": 1777453180937,
+    "banned": true,
+    "ownedFrames": [],
+    "coins": 100,
+    "ipInfo": {
+      "ip": "::1",
+      "device": "desktop",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36 Edg/147.0.0.0"
+    }
+  },
+  {
+    "id": "mojtzxrdzx46j",
+    "username": "g",
+    "password_hash": "$2b$10$Gti6HuKKazeesM53VoiKkOBSGYZdgTDQJaTa2/70SK8RmWtkY6OOy",
+    "role": "USER",
+    "displayName": "a",
+    "avatar": "https://api.dicebear.com/7.x/notionists/svg?seed=g&backgroundColor=b6e3f4",
+    "banner": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&auto=format&fit=crop",
+    "bio": "New to AnimeCord!",
+    "status": "online",
+    "lastActive": 1777456361487,
+    "banned": true,
+    "ownedFrames": [],
+    "coins": 100,
+    "ipInfo": {
+      "ip": "::1",
+      "device": "desktop",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36 Edg/147.0.0.0"
+    }
+  },
+  {
+    "id": "mojvn4y82o39m",
+    "username": "ffas",
+    "password_hash": "$2b$10$cCXAm7lx6eKNZCbM/fxeBeQyxs8a759ilViB.ji/uTJWcAFphP8v.",
+    "role": "USER",
+    "displayName": "sadas",
+    "avatar": "https://api.dicebear.com/7.x/notionists/svg?seed=ffas&backgroundColor=b6e3f4",
+    "banner": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&auto=format&fit=crop",
+    "bio": "New to AnimeCord!",
+    "status": "online",
+    "lastActive": 1777456734122,
+    "banned": false,
+    "ownedFrames": [
+      "Alhaitham"
+    ],
+    "coins": 100,
+    "ipInfo": {
+      "ip": "::1",
+      "device": "desktop",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36 Edg/147.0.0.0"
+    },
+    "activeFrame": "Alhaitham"
+  },
+  {
+    "id": "mojwaw1hzu2df",
+    "username": "test",
+    "password_hash": "$2b$10$1TakfJi1fOPjrsFcNlpUp.lrQ4tgDMMgGkoVg4S92EvqLsuE75rAi",
+    "role": "USER",
+    "displayName": "t",
+    "avatar": "https://api.dicebear.com/7.x/notionists/svg?seed=test&backgroundColor=b6e3f4",
+    "banner": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&auto=format&fit=crop",
+    "bio": "New to AnimeCord!",
+    "status": "online",
+    "lastActive": 1777457594610,
+    "banned": false,
+    "ownedFrames": [],
+    "coins": 100,
+    "ipInfo": {
+      "ip": "::1",
+      "device": "mobile",
+      "userAgent": "Mozilla/5.0 (Linux; Android 13; Pixel 7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Mobile Safari/537.36 Edg/147.0.0.0"
+    }
+  },
+  {
+    "id": "mojxflwts0sy5",
+    "username": "wwww",
+    "password_hash": "$2b$10$UKLsWYPCjoEH1nOAX/Fqx.x5R24U7ctb.2uTfs117GuSqe7DLPVyC",
+    "role": "USER",
+    "displayName": "www",
+    "avatar": "https://api.dicebear.com/7.x/notionists/svg?seed=wwww&backgroundColor=b6e3f4",
+    "banner": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&auto=format&fit=crop",
+    "bio": "New to AnimeCord!",
+    "status": "online",
+    "lastActive": 1777459399085,
+    "banned": false,
+    "ownedFrames": [],
+    "coins": 100,
+    "ipInfo": {
+      "ip": "::1",
+      "device": "desktop",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"
+    }
+  },
+  {
+    "id": "mojycaqlzv1oz",
+    "username": "r",
+    "password_hash": "$2b$10$zCwK3qbKPb.liKeqOt78j.GvCCiyDqNZXw.MaHTfMGbTHXAZGKV8.",
+    "role": "USER",
+    "displayName": "r",
+    "avatar": "https://api.dicebear.com/7.x/notionists/svg?seed=r&backgroundColor=b6e3f4",
+    "banner": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&auto=format&fit=crop",
+    "bio": "New to AnimeCord!",
+    "status": "online",
+    "lastActive": 1777460924253,
+    "banned": false,
+    "ownedFrames": [],
+    "coins": 100,
+    "ipInfo": {
+      "ip": "::1",
+      "device": "desktop",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"
+    }
+  }
+]
