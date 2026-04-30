@@ -42,3 +42,20 @@ export const saveUnifiedUser = async (user: any) => {
   else users.push(user);
   await saveToBlob('users', users);
 };
+
+export const updateUnifiedUser = async (id: string, data: any) => {
+  // 1. Try Postgres
+  try {
+    await postgresDb.update(usersSchema).set(data).where(eq(usersSchema.id, id));
+  } catch (err) {
+    console.error('Postgres update failed:', err);
+  }
+
+  // 2. Always update Blob
+  const users = await loadFromBlob('users') || [];
+  const index = users.findIndex((u: any) => u.id === id);
+  if (index >= 0) {
+    users[index] = { ...users[index], ...data };
+    await saveToBlob('users', users);
+  }
+};

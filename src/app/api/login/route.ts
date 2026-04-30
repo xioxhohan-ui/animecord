@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 export const dynamic = 'force-dynamic';
-import { getUnifiedUser, saveUnifiedUser } from '@/lib/db/unified';
+import { getUnifiedUser, saveUnifiedUser, updateUnifiedUser } from '@/lib/db/unified';
 import { comparePassword, signToken, hashPassword } from '@/lib/auth';
 import { nanoid } from 'nanoid';
 
@@ -44,11 +44,11 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: 'Invalid credentials' }, { status: 401 });
     }
 
-    // Update last active
-    await db.update(users).set({ 
+    // Update last active (Unified)
+    await updateUnifiedUser(user.id, { 
       lastActive: new Date(),
       deviceId: deviceId || user.deviceId
-    }).where(eq(users.id, user.id));
+    });
 
     const token = signToken({ id: user.id, username: user.username, role: user.role });
 
