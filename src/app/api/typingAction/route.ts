@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server';
+export const dynamic = 'force-dynamic';
 import { validateUser } from '@/lib/api-utils';
 import { triggerRealtime } from '@/lib/pusher';
 

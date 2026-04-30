@@ -1,5 +1,6 @@
 import { put } from '@vercel/blob';
 import { NextResponse } from 'next/server';
+export const dynamic = 'force-dynamic';
 import { verifyToken } from '@/lib/auth';
 
 export async function POST(request: Request): Promise<NextResponse> {
