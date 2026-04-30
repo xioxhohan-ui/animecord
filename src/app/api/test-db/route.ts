@@ -14,6 +14,7 @@ export async function GET() {
       database: 'connected',
       latency: `${duration}ms`,
       driver: 'neon-serverless',
+      is_using_dummy: !process.env.POSTGRES_URL && !process.env.DATABASE_URL,
       env_check: {
         DATABASE_URL: !!process.env.DATABASE_URL,
         POSTGRES_URL: !!process.env.POSTGRES_URL,
