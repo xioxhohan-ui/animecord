@@ -1,8 +1,6 @@
 import { NextResponse } from 'next/server';
 export const dynamic = 'force-dynamic';
-import { db } from '@/lib/db';
-import { users } from '@/lib/db/schema';
-import { eq } from 'drizzle-orm';
+import { getUnifiedUser, saveUnifiedUser } from '@/lib/db/unified';
 import { comparePassword, signToken, hashPassword } from '@/lib/auth';
 import { nanoid } from 'nanoid';
 
@@ -14,34 +12,23 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: 'Missing username or password' }, { status: 400 });
     }
 
-    // Try to find user
-    let user;
-    try {
-      [user] = await db.select().from(users).where(eq(users.username, username.toLowerCase())).limit(1);
-    } catch (dbError: any) {
-      console.error('Database access error:', dbError);
-      return NextResponse.json({ 
-        error: 'Database connection failed', 
-        details: 'Vercel Postgres is not responding. 1. Go to Vercel Dashboard -> Storage -> Connect Postgres. 2. Ensure POSTGRES_URL is set.',
-        technical: dbError.message 
-      }, { status: 500 });
-    }
+    // Use the Unified Interface (Postgres with Blob Fallback)
+    const result = await getUnifiedUser(username);
+    let user = result?.user;
 
-    // Auto-seed CEO if no users exist and trying to login as ceo
+    // Auto-seed CEO if no users exist anywhere and trying to login as ceo
     if (!user && username.toLowerCase() === 'ceo') {
-      const allUsers = await db.select().from(users).limit(1);
-      if (allUsers.length === 0) {
-        const hashedPassword = await hashPassword('ceo123');
-        const [newCeo] = await db.insert(users).values({
-          id: nanoid(),
-          username: 'ceo',
-          passwordHash: hashedPassword,
-          displayName: 'CEO',
-          role: 'CEO',
-          avatar: 'https://api.dicebear.com/7.x/notionists/svg?seed=ceo',
-        }).returning();
-        user = newCeo;
-      }
+      const hashedPassword = await hashPassword('ceo123');
+      user = {
+        id: nanoid(),
+        username: 'ceo',
+        passwordHash: hashedPassword,
+        displayName: 'CEO',
+        role: 'CEO',
+        avatar: 'https://api.dicebear.com/7.x/notionists/svg?seed=ceo',
+        coins: 1000
+      };
+      await saveUnifiedUser(user);
     }
 
     if (!user) {
