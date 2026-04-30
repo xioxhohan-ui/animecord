@@ -24,7 +24,7 @@ export function useRealtime() {
   };
 
   useEffect(() => {
-    if (!isAuthenticated) {
+    if (!isAuthenticated || !pusherClient) {
       stopPolling();
       return;
     }
