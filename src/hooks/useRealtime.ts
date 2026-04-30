@@ -1,9 +1,10 @@
 import { useEffect, useRef } from 'react';
 import { useAuthStore } from '../store/authStore';
 import { useChatStore } from '../store/chatStore';
+import { pusherClient } from '../lib/pusher-client';
 
 export function useRealtime() {
-  const { isAuthenticated, forceLogout } = useAuthStore();
+  const { isAuthenticated, forceLogout, user } = useAuthStore();
   const {
     fetchServers,
     fetchMessages,
@@ -28,63 +29,83 @@ export function useRealtime() {
       return;
     }
 
+    // ─── Pusher Real-time Subscriptions ───
+    
+    // 1. Channel Messages
+    let channelSub: any = null;
+    if (activeChannelId) {
+      channelSub = pusherClient.subscribe(`channel-${activeChannelId}`);
+      channelSub.bind('new-message', (data: any) => {
+        // Optimistic update already handles sending, this is for receiving
+        if (data.senderId !== user?.id) {
+          fetchMessages(activeChannelId);
+        }
+      });
+      channelSub.bind('message-deleted', () => fetchMessages(activeChannelId));
+      channelSub.bind('message-updated', () => fetchMessages(activeChannelId));
+    }
+
+    // 2. Personal DMs and Notifications
+    const userSub = pusherClient.subscribe(`user-${user?.id}`);
+    userSub.bind('new-dm', () => {
+      if (activeDmUserId) fetchDms(activeDmUserId);
+      fetchDmConversations();
+    });
+
     // ─── Core Security Check (Banned Check) ───
     const checkBanStatus = async () => {
       try {
         const res = await fetch('/api/checkBan', {
           headers: {
             Authorization: `Bearer ${localStorage.getItem('animecord_token')}`,
-            'x-device-id': localStorage.getItem('animecord_device_id') || ''
           }
         });
         if (res.status === 403) {
-          const data = await res.json();
-          if (data.status === 'banned' || data.error === 'Banned') {
-            forceLogout();
-          }
+          forceLogout();
         }
-      } catch (e) {
-        console.error('Ban check failed', e);
-      }
+      } catch (e) {}
     };
 
     // ─── Initial Fetch ───
     fetchServers();
     fetchDmConversations();
+    fetchUsers();
     checkBanStatus();
 
-    // ─── Polling Intervals ───
+    // ─── Fallback Polling (Much Slower now with Pusher) ───
     
-    // Quick polling for messages (2s)
-    const msgInterval = setInterval(() => {
-      if (activeChannelId) fetchMessages(activeChannelId);
-      if (activeDmUserId) fetchDms(activeDmUserId);
-    }, 2000);
-
-    // Moderate polling for servers and conversations (5s)
+    // Moderate polling for data sync (30s)
     const dataInterval = setInterval(() => {
       fetchServers();
       fetchDmConversations();
       fetchUsers();
-    }, 5000);
-
-    // Slow polling for security and stats (10s)
-    const securityInterval = setInterval(() => {
       checkBanStatus();
+    }, 30000);
+
+    // Stats polling (1m)
+    const statsInterval = setInterval(() => {
       fetchStats();
-    }, 10000);
+    }, 60000);
 
-    pollingIntervals.current = [msgInterval, dataInterval, securityInterval];
+    pollingIntervals.current = [dataInterval, statsInterval];
 
-    return () => stopPolling();
+    return () => {
+      stopPolling();
+      if (channelSub) {
+        pusherClient.unsubscribe(`channel-${activeChannelId}`);
+      }
+      pusherClient.unsubscribe(`user-${user?.id}`);
+    };
   }, [
     isAuthenticated,
+    user?.id,
     activeChannelId,
     activeDmUserId,
     fetchServers,
     fetchMessages,
     fetchDms,
     fetchDmConversations,
+    fetchUsers,
     fetchStats,
     forceLogout
   ]);
