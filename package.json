@@ -13,7 +13,7 @@
     "db:push": "drizzle-kit push"
   },
   "dependencies": {
-    "@neondatabase/serverless": "^1.1.0",
+    "@vercel/postgres": "^0.10.0",
     "bcryptjs": "^3.0.3",
     "clsx": "^2.1.1",
     "concurrently": "^9.2.1",

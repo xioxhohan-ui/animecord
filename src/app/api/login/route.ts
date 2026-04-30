@@ -33,8 +33,12 @@ export async function POST(request: Request) {
 
     const { passwordHash, ...safeUser } = user;
     return NextResponse.json({ token, user: safeUser });
-  } catch (error) {
-    console.error('Login error:', error);
-    return NextResponse.json({ error: 'Internal server error' }, { status: 500 });
+  } catch (error: any) {
+    console.error('Login error details:', {
+      message: error.message,
+      stack: error.stack,
+      name: error.name
+    });
+    return NextResponse.json({ error: 'Internal server error', details: error.message }, { status: 500 });
   }
 }
