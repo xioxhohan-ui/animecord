@@ -37,7 +37,7 @@ export default function ChatArea({
   const API_HDR = () => ({ 'Content-Type': 'application/json', Authorization: `Bearer ${localStorage.getItem('animecord_token') || ''}` });
 
   const broadcastTyping = () => {
-    fetch('/.netlify/functions/typingAction', { method: 'POST', headers: API_HDR(), body: JSON.stringify({ channelId }) }).catch(() => {});
+    fetch('/api/typingAction', { method: 'POST', headers: API_HDR(), body: JSON.stringify({ channelId }) }).catch(() => {});
   };
 
   const activeServer = servers.find(s => s.id === activeServerId);
@@ -54,7 +54,7 @@ export default function ChatArea({
   useEffect(() => {
     pollTypingRef.current = setInterval(async () => {
       try {
-        const r = await fetch(`/.netlify/functions/typingAction?channelId=${channelId}`, { headers: API_HDR() });
+        const r = await fetch(`/api/typingAction?channelId=${channelId}`, { headers: API_HDR() });
         const data = await r.json();
         setRemoteTyping(Array.isArray(data) ? data.map((t: { userName: string }) => t.userName) : []);
       } catch {}

@@ -10,7 +10,7 @@ import type { DmMessage } from '../../types';
 import FramedAvatar from '../ui/FramedAvatar';
 
 const EMOJIS = ['😀','😂','😍','😎','🥺','😭','🔥','✨','💀','🎉','❤️','👍','👋','🤔','😡','🥳','💯','🤝','🫡','🙏'];
-const API = '/.netlify/functions';
+const API = '/api';
 const authHdr = () => ({ 'Content-Type': 'application/json', Authorization: `Bearer ${localStorage.getItem('animecord_token') || ''}` });
 
 export default function DmArea({ userId }: { userId: string }) {
